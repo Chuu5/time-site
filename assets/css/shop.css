@@ -26,15 +26,16 @@ p {
 
 .banner {
     display: flex;
+    justify-content: center;
 }
 
 .clock-text {
     display: flex;
+    /* flex: 1; */
     width: 100px;
-    flex: 1;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 400px;
     background-color: #11265C;
     color: var(--secondary-color);
 
@@ -56,7 +57,7 @@ p {
     border-bottom-right-radius: 30px;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: 400px;
 }
 
 .sellers {
@@ -157,6 +158,6 @@ p {
 
 @media (max-width: 950px) {    
     .sellers {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
