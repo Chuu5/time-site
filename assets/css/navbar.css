@@ -1,0 +1,137 @@
+
+:root {
+    --primary-color: #1363DF;
+    --secondary-color: #47B5FF;
+    --darker-color: #06283D;
+    --little-purple: #17249e;
+}
+
+
+.container {
+    max-width: 1100px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 10px;
+    transition: 400ms;
+    color: var(--primary-color);
+}
+
+li.active,
+li:hover {
+    border-bottom: 1px solid rgb(74, 74, 177);
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.close-menu,
+.open-menu {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 100;
+}
+
+.close-menu {
+    right: 15px;
+}
+
+.close-menu img {
+    height: 20px;
+}
+
+@media (max-width: 730px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    body.menu-expanded {
+        overflow: hidden;
+    }
+
+
+    
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.245);
+        width: 50%;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        height: 100%;
+        z-index: 100;
+    }
+    
+    body.menu-expanded .menu {
+        display: block;
+    }
+
+    .open-menu {
+        display: inline-block;
+    }
+
+    body.menu-expanded .open-menu {
+        display: none;
+    }
+
+    body.menu-expanded .close-menu {
+        display: inline-block;
+    }
+
+    ul {
+        display: none;
+    }
+    
+    body.menu-expanded ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    body.menu-expanded ul a {
+        color: var(--secondary-color);
+    }
+
+    body.menu-expanded ul li {
+        padding-bottom: 0;
+    }
+
+
+    body.menu-expanded .close-menu {
+        display: inline-block;
+    }
+}
+    /* nav */
+
+/* nav */
