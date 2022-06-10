@@ -67,7 +67,9 @@ p {
     justify-items: center;
     margin-top: 20px;
     width: 100%;
-    height: 400px;
+    height: 100%;
+
+    position: relative;
 }
 
 .inner-seller {
@@ -154,6 +156,73 @@ p {
 .submit button:hover {
     background-color: var(--primary-color);
 }
+
+.thanks {
+
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 50%;
+    background-color: var(--primary-color);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+
+    
+    transform: translateY(100vh);
+    transition: 800ms;
+}
+
+body.appear {
+    overflow-y: hidden;
+}
+
+body.appear .thanks {
+    transform: translateY(0vh);
+    visibility: visible;
+    opacity: 1;
+    height: 50vh;
+    z-index: 100;
+
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+footer h3 {
+    color: white;
+    font-size: 25px;
+}
+
+footer ul {
+    justify-content: center;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--little-purple);
+}
+
+
 
 @media (max-width: 950px) {
 
