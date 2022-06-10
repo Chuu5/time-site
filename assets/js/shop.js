@@ -13,7 +13,7 @@ for(let i = 0; i < purchase.length; i++) {
 
     purchase[i].addEventListener("click", () => {
 
-        if(count[i] > 0 && body.clientWidth > 600) {
+        if(count[i] > 0 && body.clientWidth > 950) {
             thanks.innerHTML = `<p>Thanks for purchasing our time</p><p class="opacity">Price: $${count[i] * prices[i]}</p>`
             body.classList.add("appear")
             value[i].innerHTML = 0
@@ -24,7 +24,7 @@ for(let i = 0; i < purchase.length; i++) {
                 
             }, 3000)
 
-        } else if (count[i] > 0 && body.clientWidth <= 600) {
+        } else if (count[i] > 0 && body.clientWidth <= 950) {
             thanksInMedia[i].classList.add("media")
 
             thanksInMedia[i].innerHTML = `<p>Thanks for purchasing our time</p><p class="opacity">Price: $${count[i] * prices[i]}</p>`

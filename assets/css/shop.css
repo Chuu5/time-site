@@ -173,7 +173,8 @@ p {
     visibility: hidden;
     height: 0;
     width: 50%;
-    background-color: var(--primary-color);
+    background-color: #7858A6;
+    border-radius: 5px;
 
     position: absolute;
     top: 0;
@@ -247,22 +248,14 @@ footer a:hover {
     .sellers {
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 600px) {
-    .clock-text {
-        display: none;
-    }
-
-
     body.appear .beeg {
         height: 100%;
     }
-
+    
     body.appear .beeg .thanks {
         display: none;
     }
-
+    
     body.appear .inner-seller .thanks.media {
         transform: translateY(0vh);
         visibility: visible;
@@ -271,4 +264,12 @@ footer a:hover {
         z-index: 100;
     
     }
+}
+
+@media (max-width: 600px) {
+    .clock-text {
+        display: none;
+    }
+
+
 }
