@@ -79,6 +79,7 @@ p {
     text-align: center;
     padding: 20px;
     box-shadow: 7px 8px 3px rgba(0, 0, 0, 0.309);
+    position: relative;
 }
 
 .seller-img {
@@ -157,6 +158,15 @@ p {
     background-color: var(--primary-color);
 }
 
+.beeg {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    
+    background-color: rgba(0, 0, 0, 0.442);
+}
+ 
+
 .thanks {
 
     opacity: 0;
@@ -187,7 +197,15 @@ body.appear {
     overflow-y: hidden;
 }
 
-body.appear .thanks {
+body.appear .beeg {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+body.appear .beeg .thanks {
     transform: translateY(0vh);
     visibility: visible;
     opacity: 1;
@@ -234,5 +252,23 @@ footer a:hover {
 @media (max-width: 600px) {
     .clock-text {
         display: none;
+    }
+
+
+    body.appear .beeg {
+        height: 100%;
+    }
+
+    body.appear .beeg .thanks {
+        display: none;
+    }
+
+    body.appear .inner-seller .thanks.media {
+        transform: translateY(0vh);
+        visibility: visible;
+        opacity: 1;
+        height: 50vh;
+        z-index: 100;
+    
     }
 }
