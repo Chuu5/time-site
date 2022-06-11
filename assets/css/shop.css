@@ -8,7 +8,9 @@
     --primary-color: #1363DF;
     --secondary-color: #47B5FF;
     --darker-color: #06283D;
-    --little-purple: #17249e;
+    --darker-blue: #17249e;
+    --purple: #5B4B8A;
+    --darker-purple: #4C3575;
 }
 
 body {
@@ -16,6 +18,7 @@ body {
     height: 100%;
     background-color: var(--darker-color);
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 p {
@@ -149,7 +152,7 @@ p {
     border: none;
     outline: none;
     color: white;
-    background-color: var(--little-purple);
+    background-color: var(--little-blue);
     transition: 400ms;
     cursor: pointer;
 }
@@ -161,9 +164,18 @@ p {
 .beeg {
     opacity: 0;
     visibility: hidden;
-    height: 0;
+    height: 100%;
+
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
     
     background-color: rgba(0, 0, 0, 0.442);
+    transition: 500ms;
 }
  
 
@@ -176,11 +188,11 @@ p {
     background-color: #7858A6;
     border-radius: 5px;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; 
 
     display: flex;
     flex-direction: column;
@@ -191,7 +203,7 @@ p {
 
     
     transform: translateY(100vh);
-    transition: 800ms;
+    transition: 500ms;
 }
 
 body.appear {
@@ -201,9 +213,7 @@ body.appear {
 body.appear .beeg {
     opacity: 1;
     visibility: visible;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    
 }
 
 body.appear .beeg .thanks {
@@ -215,31 +225,7 @@ body.appear .beeg .thanks {
 
 }
 
-footer {
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.178);
-}
 
-footer h3 {
-    color: white;
-    font-size: 25px;
-}
-
-footer ul {
-    justify-content: center;
-}
-
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--little-purple);
-}
 
 
 
@@ -248,9 +234,7 @@ footer a:hover {
     .sellers {
         grid-template-columns: 1fr;
     }
-    body.appear .beeg {
-        height: 100%;
-    }
+    
     
     body.appear .beeg .thanks {
         display: none;
@@ -261,8 +245,8 @@ footer a:hover {
         visibility: visible;
         opacity: 1;
         height: 50vh;
-        z-index: 100;
-    
+        z-index: 200;
+        
     }
 }
 

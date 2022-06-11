@@ -1,0 +1,15 @@
+.donation {
+    background-image: url(https://cdn.pixabay.com/photo/2021/03/30/03/08/handshake-6135751_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 80vh;
+}
+
+.donation-options {
+    height: 100%;
+    margin-top: 20px;
+    width: 500px;
+    margin-left: 100px;
+    background-color: rgb(171, 63, 221);
+}

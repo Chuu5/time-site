@@ -3,7 +3,28 @@
     --primary-color: #1363DF;
     --secondary-color: #47B5FF;
     --darker-color: #06283D;
-    --little-purple: #17249e;
+    --little-blue: #17249e;
+    --purple: #5B4B8A;
+    --darker-purple: #4C3575;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--darker-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
 }
 
 
@@ -71,16 +92,17 @@ nav a {
 footer {
     clear: both;
     height: 200px;
-    margin-top: -200px;
+    margin-top: 10px;
     padding: 20px;
-    margin-top: 40px;
+    position: relative;
+    top: 10px;
+    bottom: 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
 
 
     background-color: rgba(0, 0, 0, 0.178);
@@ -101,8 +123,10 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--little-purple);
+    color: var(--little-blue);
 }
+
+
 
 @media (max-width: 730px) {
     body {
