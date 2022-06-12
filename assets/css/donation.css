@@ -1,4 +1,22 @@
+:root {
+    --primary-color: #1363DF;
+    --secondary-color: #646FD4;
+    --darker-color: #06283D;
+    --little-blue: #17249e;
+    --purple: #5B4B8A;
+    --darker-purple: #4C3575;
+}
+
+
+h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
 .donation {
+    display: flex;
+    align-items: center;
     background-image: url(https://cdn.pixabay.com/photo/2021/03/30/03/08/handshake-6135751_960_720.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,9 +25,132 @@
 }
 
 .donation-options {
+    height: 90%;
+    padding: 30px;
+    width: 50%;
+    margin-left: 50px;
+    background-color: var(--darker-purple);
+}
+
+.donation-purchase {
+    border: 1px solid white;
+
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #646FD4; 
+}
+
+.option:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.option h3 {
+    color: black;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+.option p {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.donation-options button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    padding: 10px;
+    margin: 40px auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+
+    color: white;
+    background-color: var(--secondary-color);
+    transition: 300ms;
+}
+
+.donation-options button:hover {
+    background: var(--primary-color);
+}
+
+
+.purchasing {
+    opacity: 0;
+    visibility: hidden;
     height: 100%;
-    margin-top: 20px;
-    width: 500px;
-    margin-left: 100px;
-    background-color: rgb(171, 63, 221);
+
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    
+    background-color: rgba(0, 0, 0, 0.442);
+    transition: 500ms;
+}
+ 
+
+.thanks {
+
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 50%;
+    background-color: var(--darker-color);
+    border-radius: 5px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+
+    
+    transform: translateY(100vh);
+    transition: 500ms;
+}
+
+body.appear {
+    overflow-y: hidden;
+}
+
+body.appear .purchasing {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.appear .purchasing .thanks {
+    transform: translateY(0vh);
+    visibility: visible;
+    opacity: 1;
+    height: 50vh;
+    z-index: 100;
+
+}
+
+
+@media (max-width:700px) {
+    .donation-options {
+        width: 80%;
+    }
 }

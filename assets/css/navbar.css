@@ -1,9 +1,9 @@
 
 :root {
     --primary-color: #1363DF;
-    --secondary-color: #47B5FF;
+    --secondary-color: #646FD4;
     --darker-color: #06283D;
-    --little-blue: #17249e;
+    --little-blue: #242F9B;
     --purple: #5B4B8A;
     --darker-purple: #4C3575;
 }
@@ -92,10 +92,9 @@ nav a {
 footer {
     clear: both;
     height: 200px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 20px;
     position: relative;
-    top: 10px;
     bottom: 0;
 
     display: flex;

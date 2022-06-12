@@ -6,9 +6,11 @@
 
 :root {
     --primary-color: #1363DF;
-    --secondary-color: #47B5FF;
+    --secondary-color: #646FD4;
     --darker-color: #06283D;
-    --little-purple: #17249e;
+    --darker-blue: #17249e;
+    --purple: #5B4B8A;
+    --darker-purple: #4C3575;
 }
 
 body {
@@ -74,7 +76,7 @@ h2 {
 
 .random-name button a {
     text-decoration: none;
-    color: var(--little-purple);
+    color: var(--little-blue);
 }
 
 button:hover {

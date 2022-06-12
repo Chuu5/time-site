@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #1363DF;
-    --secondary-color: #47B5FF;
+    --secondary-color: #646FD4;
     --darker-color: #06283D;
     --darker-blue: #17249e;
     --purple: #5B4B8A;
@@ -185,7 +185,7 @@ p {
     visibility: hidden;
     height: 0;
     width: 50%;
-    background-color: #7858A6;
+    background-color: var(--darker-color);
     border-radius: 5px;
 
     position: fixed;
